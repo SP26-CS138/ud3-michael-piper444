@@ -5,9 +5,9 @@ DATE: <04/20/2026>
 '''
 
 """
-Luiseno flashcard quiz program for language revitalization efforts.
+Luiseno word list program
 
-The program quizzes user on several different phrases in Luiseno language
+The program shows users a list of Luiseno words and their corresponding English equivalent.
 """
 
 ##########################################
@@ -43,3 +43,25 @@ def load_file(Luiseno):
 # MAIN PROGRAM:
 ##########################################
 # <replace this line with your main program>
+def main():
+    file_name = "Luiseno.txt"
+    create_file()
+    load_file(file_name)
+    while True:
+        print("Welcome to menu: ")
+        print("1. See words")
+        print("2. Exit")
+
+        user_input = input("Please enter your choice")
+        if user_input == "1." or user_input == user_input.startswith("t"):
+            load_file(Luiseno)
+        elif user_input == user_input.startswith("2") or user_input.startswith("e"):
+            print("Thanks for checking out the program.")
+        else:
+            print("Invalid input. Please try again.")
+
+if __name__ == main():
+    main()
+
+
+            
